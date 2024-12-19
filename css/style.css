@@ -1,0 +1,384 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(90deg, #000, #111);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav a.active,
+header nav a:hover {
+    color: #fff;
+}
+
+/* Текстовая секция */
+        .additional-info {
+            padding: 60px 20px;
+        }
+
+        .info-block {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .info-block.left {
+            flex-direction: row-reverse;
+        }
+
+        .content {
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .content blockquote {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin: 15px 0;
+            padding-left: 15px;
+            border-left: 5px solid #444;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .info-image {
+            width: 300px;
+            height: auto;
+            border-radius: auto;
+            margin: 0 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .vertical-line {
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #444, #fff, #444);
+        }
+
+/* Анимация появления слева направо */
+@keyframes fadeInSnake {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* Сдвиг слева */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Установить в нормальное положение */
+    }
+}
+
+/* Изначальное состояние блоков */
+.info-block {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* Видимый блок */
+.info-block.visible {
+    animation: fadeInSnake 0.8s ease forwards;
+}
+
+
+/* Геройская секция */
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080/?music,beatles') no-repeat center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Таймлайн */
+.live-performances {
+    padding: 60px 30px;
+    background-color: #000;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.live-performances p {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+    border-left: 3px solid #777; /* Серая линия */
+}
+
+.year {
+    margin-bottom: 40px;
+    opacity: 0; /* Для анимации */
+    transform: translateY(20px); /* Начальная позиция */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Плавность появления */
+}
+
+.year.visible {
+    opacity: 1; /* Конечное состояние */
+    transform: translateY(0); /* Конечная позиция */
+}
+
+.year h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.year ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.year ul li {
+    color: #ccc;
+    margin: 10px 0;
+    line-height: 1.6;
+    position: relative;
+}
+
+.year ul li::before {
+    content: "•";
+    position: absolute;
+    left: -25px; /* Расположение маркера на линии */
+    top: 0;
+    font-size: 1.2rem;
+    color: #777; /* Цвет маркера под стать линии */
+}
+
+/* Анимация появления при прокрутке */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Эффекты появления */
+.animate {
+    opacity: 0; /* Исходное состояние */
+    visibility: hidden; /* Скрыто до появления */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate.fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Альбомы */
+.albums {
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    background: #111;
+}
+
+.album {
+    background: linear-gradient(145deg, #222, #333);
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.album:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.album img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.album h3 {
+    margin: 10px 0;
+}
+
+.album p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.album button {
+    padding: 10px 20px;
+    background: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.album button:hover {
+    background: #555;
+}
+
+/* Контакты */
+.contact {
+    padding: 60px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: #555;
+}
+
+/* Футер */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    </style>

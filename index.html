@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Легендарные звуки - The Beatles</title>
+    <style>
+
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Геройская секция */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягивает изображение */
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Полупрозрачный слой */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff; /* Белый цвет стрелки */
+    font-size: 2rem; /* Размер стрелки */
+    transition: transform 0.3s;
+}
+
+.scroll-down:hover {
+    transform: translateY(5px); /* Эффект "подпрыгивания" при наведении */
+}
+
+.arrow-down {
+    font-size: 3rem; /* Увеличенный размер стрелки */
+    animation: bounce 1.5s infinite; /* Анимация прыжков */
+}
+
+/* Анимация стрелки */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень текста */
+    animation: fadeInDown 1.5s ease; /* Анимация заголовка */
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 2s ease; /* Анимация текста */
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    background: #6a0dad; /* Основной цвет */
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #8b5cdd; /* Светлее при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовки */
+.section-title {
+    font-size: 4rem; /* Увеличен для Hero */
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(90deg, #000, #111);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+header .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a.active,
+header nav a:hover {
+    color: #fff;
+}
+
+/* Текстовая секция */
+        .additional-info {
+            padding: 100px 20px;
+        }
+
+        .info-block {
+            display: flex;
+            align-items: center;
+            margin: 80px 0;
+            position: relative;
+        }
+
+        .info-block.left {
+            flex-direction: row-reverse;
+        }
+
+        .content {
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .content blockquote {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin: 15px 0;
+            padding-left: 15px;
+            border-left: 5px solid #444;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .info-image {
+            width: 500px;
+            height: auto;
+            border-radius: auto;
+            margin: 0 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .vertical-line {
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, #444, #fff, #444);
+        }
+
+/* Анимация появления слева направо */
+@keyframes fadeInSnake {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* Сдвиг слева */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Установить в нормальное положение */
+    }
+}
+
+/* Изначальное состояние блоков */
+.info-block {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* Видимый блок */
+.info-block.visible {
+    animation: fadeInSnake 0.8s ease forwards;
+}
+
+
+/* Геройская секция */
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080/?music,beatles') no-repeat center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Список живых выступлений */
+.live-performances {
+    padding: 60px 30px;
+    background-color: #000;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.live-performances p {
+    text-align: center;
+    color: #bbb;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+/* Блоки года */
+.year {
+    margin-bottom: 40px;
+    opacity: 0; /* Скрываем блок для анимации */
+    transform: translateY(20px); /* Сдвиг вниз */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Плавное появление */
+    position: relative; /* Для размещения псевдоэлемента */
+}
+
+.year.visible {
+    opacity: 1; /* Блок становится видимым */
+    transform: translateY(0); /* Убираем сдвиг */
+}
+
+/* Линия для каждого блока */
+.year::before {
+    content: "";
+    position: absolute;
+    left: -20px; /* Расположение линии */
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #777; /* Серая линия */
+    opacity: 0; /* Линия изначально скрыта */
+    transform: scaleY(0); /* Линия изначально свернута */
+    transform-origin: top; /* Разворачивание сверху вниз */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Анимация линии */
+}
+
+.year.visible::before {
+    opacity: 1; /* Линия становится видимой */
+    transform: scaleY(1); /* Линия разворачивается */
+}
+
+.year h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.year ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.year ul li {
+    color: #ccc;
+    margin: 10px 0;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* Анимация появления при прокрутке */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Эффекты появления */
+.animate {
+    opacity: 0; /* Исходное состояние */
+    visibility: hidden; /* Скрыто до появления */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate.fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Слушать альбомы */
+.albums {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    background: #000; /* Чёрный фон секции */
+}
+
+.album-list {
+    display: flex;
+    gap: 30px;
+}
+
+.album {
+    background: #333; /* Тёмно-серый фон альбомов */
+    border: 2px solid #444; /* Тонкая светло-серая граница */
+    border-radius: 10px; /* Скругление углов */
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.6s, box-shadow 0.3s, border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Тень */
+    opacity: 0; /* Скрыто по умолчанию */
+    transform: translateX(-100px); /* Начальная позиция для появления слева */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.album.visible {
+    opacity: 1; /* Показываем элемент */
+    transform: translateX(0); /* Возвращаем в нормальное положение */
+}
+
+.album:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 0 15px rgba(106, 13, 173, 0.8), 0 0 30px rgba(139, 92, 221, 0.6); /* Свечение фиолетовым */
+    border-color: #6a0dad; /* Фиолетовый при наведении */
+}
+
+.album img {
+    width: 100%;
+    border-radius: 10px; /* Скругление углов у изображения */
+    margin-bottom: 15px;
+}
+
+.album h3 {
+    margin: 10px 0;
+    color: #fff; /* Белый текст заголовков */
+}
+
+.album p {
+    color: #ddd; /* Светло-серый текст описания */
+    margin-bottom: 15px;
+}
+
+.album button {
+    padding: 10px 20px;
+    background: #6a0dad; /* Фиолетовая кнопка */
+    border: none;
+    border-radius: 5px; /* Скругление углов кнопки */
+    color: #fff; /* Белый текст на кнопке */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Стандартная тень кнопки */
+}
+
+.album button:hover {
+    background: #8b5cdd; /* Светлее при наведении */
+    transform: scale(1.05); /* Увеличение кнопки */
+    box-shadow: 0 0 10px rgba(139, 92, 221, 0.7), 0 0 20px rgba(106, 13, 173, 0.5); /* Свечение кнопки */
+}
+
+/* Анимация появления альбомов */
+@keyframes fadeInAlbum {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.album:nth-child(1) {
+    --animation-delay: 0s;
+}
+
+.album:nth-child(2) {
+    --animation-delay: 0.2s;
+}
+
+.album:nth-child(3) {
+    --animation-delay: 0.4s;
+}
+
+
+/* Секция формы */
+.contact {
+    padding: 60px;
+    background: #000; /* Чисто чёрный фон */
+    color: #fff;
+    text-align: center;
+}
+
+/* Заголовок секции */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Лёгкое свечение текста */
+}
+
+/* Стиль формы */
+form {
+    background: #111; /* Тёмный фон формы */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Более выразительная тень */
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #111; /* Лёгкая граница формы */
+}
+
+/* Поля ввода */
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #000; /* Чёрный фон полей */
+    border: 1px solid #444; /* Серый контур */
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); /* Внутренний эффект */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #6a0dad; /* Фиолетовый при фокусе */
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.7); /* Сияние при фокусе */
+    outline: none;
+}
+
+/* Кнопка отправки */
+form button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #6a0dad; /* Фиолетовая кнопка */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.5); /* Тень кнопки */
+}
+
+form button:hover {
+    background: #8b5cdd; /* Светлее при наведении */
+    transform: scale(1.05); /* Увеличение */
+    box-shadow: 0 8px 20px rgba(139, 92, 221, 0.7); /* Более выразительная тень */
+}
+
+/* Контактная секция */
+.contact {
+    padding: 40px;
+    background: #000; /* Чёрный фон */
+    color: #fff;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    color: #ccc; /* Светло-серый текст */
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.contact-info p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
+    color: #fff; /* Белый текст для ключевых слов */
+}
+
+/* Социальные сети */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #222; /* Тёмно-серый фон кружка */
+    border-radius: 50%; /* Круглая форма */
+    text-decoration: none; /* Убираем подчёркивание */
+    overflow: hidden; /* Обрезка изображения внутри кружка */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Лёгкое увеличение при наведении */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Белое свечение */
+}
+
+.social-icon img {
+    width: 100%; /* Изображение заполняет кружок */
+    height: 100%;
+    object-fit: cover; /* Пропорциональное заполнение */
+}
+
+/* Социальные сети */
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Карта - полная ширина */
+.map-section {
+    width: 100%;
+    height: 500px; /* Высота карты */
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #6a0dad;
+}
+
+    </style>
+
+</head>
+<body>
+
+     <!-- Меню -->
+    <header>
+        <div class="logo">The Beatles</div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="history.html">История</a>
+            <a href="disc.html">Дискография</a>
+            <a href="contact.html">Контакты</a>
+            <a href="order.html">Заказать</a>
+        </nav>
+    </header>
+
+    <!-- Главная сраница -->
+    <section class="hero">
+    <img src="images\beatles.png" alt="Hero Image" class="hero-background">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="section-title">Легендарные Звуки</h1>
+        <p class="hero-text">Погрузитесь в эпоху музыки The Beatles</p>
+        <!-- Ссылка-якорь с иконкой стрелки вниз -->
+        <a href="#albums" class="scroll-down">
+            <span class="arrow-down">↓</span>
+        </a>
+    </div>
+</section>
+
+    <!-- Общая информация -->
+    <section class="additional-info">
+        <div class="section-title">История группы</div>
+        <div class="info-block right">
+            <div class="content">
+                <h2>Истоки и путь к славе</h2>
+                <blockquote>
+                    The Beatles образовались в Ливерпуле в 1960 году. Джон Леннон и Пол Маккартни встретились на школьной вечеринке, где начали вместе сочинять песни. Прорыв случился после выступлений в гамбургских клубах, где группа оттачивала мастерство, играя по 8 часов в день.
+                </blockquote>
+            </div>
+            <div class="vertical-line"></div>
+            <img src="images\b1.jpg" alt="Интересный факт" class="info-image">
+        </div>
+        <div class="info-block left">
+            <img src="images\b2.jpg" alt="Раскол группы" class="info-image">
+            <div class="vertical-line"></div>
+            <div class="content">
+                <h2>Эпоха битломании</h2>
+                <ul>
+                    <blockquote>
+                        <li>С выходом Please Please Me (1963) группа покорила Великобританию, а затем и мир. На концерте в Shea Stadium в 1965 году собралось 55 000 человек, но их крики заглушали музыку. Это стало одной из причин, почему The Beatles перестали гастролировать.</li>
+                    </blockquote>
+                </ul>
+            </div>
+        </div>
+        <div class="info-block right">
+            <div class="content">
+                <h2>Музыкальные инновации</h2>
+                <ul>
+                    <blockquote>
+                        <li>Sgt. Pepper's Lonely Hearts Club Band (1967) стал одним из первых концептуальных альбомов, где песни были объединены общей идеей.</li>
+                        <li>В Strawberry Fields Forever использовались обратные ленты и наложение звуков, создавая уникальную психоделическую атмосферу.</li>
+                        <li>В Norwegian Wood группа впервые в рок-музыке применила ситар, открыв путь к интеграции восточных мотивов.</li>
+                        <li>Альбом Revolver (1966) включал трек Tomorrow Never Knows, записанный с использованием лупов, студийных эффектов и наложений, ставший образцом авангардного подхода.</li>
+                    </blockquote>
+                </ul>
+            </div>
+            <div class="vertical-line"></div>
+            <img src="images\b3.png" alt="Исторические туры" class="info-image">
+        </div>
+        <div class="info-block left">
+            <img src="images\b4.jpg" alt="Награды и достижения" class="info-image">
+            <div class="vertical-line"></div>
+            <div class="content">
+                <h2>Награды и достижения</h2>
+                <ul>
+                    <blockquote>
+                        <li>The Beatles завоевали 7 премий Грэмми и 15 наград Ivor Novello, включая признание за вклад в развитие музыки.</li>
+                        <li>Песня Yellow Submarine стала не только хитом, но и символом поп-культуры 60-х, вдохновив одноимённый анимационный фильм.</li>
+                        <li>Королева Елизавета II удостоила участников группы почетного Ордена Британской империи за вклад в искусство и популяризацию британской культуры.</li>
+                    </blockquote>
+                </ul>
+            </div>
+        </div>
+        <script>
+       document.addEventListener("DOMContentLoaded", () => {
+    const infoBlocks = document.querySelectorAll(".info-block");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Добавляем видимость с задержкой, используя index
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 200); // Задержка увеличивается для эффекта змейки
+            }
+        });
+    }, {
+        threshold: 0.1,
+    });
+
+    infoBlocks.forEach((block) => observer.observe(block));
+});
+        </script>
+        </section>
+
+    <!-- Список живых выступлений -->
+    <section class="live-performances">
+        <h2 class="section-title">Список живых выступлений The Beatles</h2>
+        <p>The Beatles за свою карьеру дали более **1400 живых выступлений** с 1960 по 1966 годы. Их последний официальный концерт состоялся 29 августа 1966 года на стадионе Candlestick Park в Сан-Франциско. Однако их знаменитое импровизированное выступление на крыше здания Apple Corps 30 января 1969 года стало их финальным живым появлением вместе.</p>
+        <div class="timeline">
+            <div class="year">
+                <h3>Ранние годы The Beatles (1960–1962)</h3>
+                <ul>
+                    <li>17 августа 1960 — Клуб Indra, Гамбург
+                    Первое выступление в Гамбурге. Ежедневные часы игры помогли группе развить стиль и мастерство.</li>
+                    <li>33 октября 1960 — Клуб Kaiserkeller, Гамбург
+                    Начало продолжительных выступлений, где группа обрела уверенность и первых международных поклонников.</li>
+                    <li>9 февраля 1961 — The Cavern Club, Ливерпуль
+                    Дебют в культовом клубе, который стал "домашней" сценой и укрепил их популярность среди местной аудитории.</li>
+                </ul>
+            </div>
+            <div class="year">
+                <h3>Мировая популярность The Beatles (1963–1966)</h3>
+                <ul>
+                    <li>4 ноября 1963 — Royal Variety Performance, Лондон Концерт перед королевской семьей, где Леннон пошутил: "На дешевых местах хлопайте в ладоши. Остальные позвените украшениями." Это шоу закрепило их статус звезд.</li>
+                    <li>15 августа 1965 — Shea Stadium, Нью-Йорк
+                    Первый стадионный концерт в истории с 55 000 зрителей, ставший символом битломании.</li>
+                    <li>29 августа 1966 — Candlestick Park, Сан-Франциско. Последний концерт группы, ознаменовавший конец их гастрольной карьеры.</li>
+                </ul>
+            </div>
+            <div class="year">
+                <h3>Конец живых выступлений The Beatles (1966)</h3>
+                <ul>
+                    <li>29 августа 1966 — Candlestick Park, Сан-Франциско, США
+                    Последний официальный концерт, завершивший эпоху их гастролей.</li>
+                    <li>28 августа 1966 — Dodger Stadium, Лос-Анджелес, США
+                    Предпоследнее выступление перед многотысячной аудиторией, ознаменовавшее спад битломании.</li>
+                    <li>25 июня 1966 — Budokan Hall, Токио, Япония
+                    Первое выступление западной рок-группы в Японии, вызвавшее восторг фанатов и протесты традиционалистов.</li>
+                </ul>
+            </div>
+            <div class="year">
+                <h3>Легендарные появления The Beatles после распада</h3>
+                <ul>
+                    <li>30 января 1969 — Крыша здания Apple Corps, Лондон
+                    Последнее живое выступление в полном составе во время записи Let It Be.</li>
+                    <li>31 марта 1974 — Джон Леннон и Пол Маккартни, Лос-Анджелес
+                    Неожиданное совместное джем-сессия двух бывших участников группы.</li>
+                    <li>19 апреля 1994 — Сессия Free As A Bird
+                    Воссоединение Пола, Джорджа и Ринго для записи вокала Джона Леннона, создавшего новый трек.</li>
+                </ul>
+            </div>
+        </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const years = document.querySelectorAll(".year");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); 
+            }
+        });
+    }, {
+        threshold: 0.1, // Порог видимости 10%
+    });
+
+    years.forEach((year) => observer.observe(year));
+});
+
+</script>
+    </section>
+    <section class="albums">
+        <h2 class="section-title">Альбомы The Beatles</h2>
+        <div class="album-list">
+            <div class="album">
+                <img src="images/sgt. pepper's.jpg" alt="Sgt. Pepper's">
+                <h3>Sgt. Pepper's Lonely Hearts Club Band (1967)</h3>
+                <p>Революционный концептуальный альбом, задавший новый стандарт в музыке.</p>
+                <button onclick="playAlbum('music/The_BeatlesPennyLane.mp3', 'Sgt. Pepper\'s Lonely Hearts Club Band')">Послушать альбом</button>
+            </div>
+            <div class="album">
+                <img src="images/abbey.road.jpg" alt="Abbey Road">
+                <h3>Abbey Road (1969)</h3>
+                <p>Легендарный альбом с культовой обложкой. Хиты: Come Together, Something и знаменитая финальная медли.</p>
+                <button onclick="playAlbum('music/The_BeatlesAbbeyRoad.mp3', 'Abbey Road')">Послушать альбом</button>
+            </div>
+            <div class="album">
+                <img src="images/revolver.jfif" alt="Revolver">
+                <h3>Revolver (1966)</h3>
+                <p>Экспериментальный альбом, расширивший границы поп-музыки.</p>
+                <button onclick="playAlbum('music/ThebeatlesGoodDaySunshine.mp3', 'Revolver')">Послушать альбом</button>
+            </div>
+            <div class="album">
+                <img src="images/thebeatles.png" alt="The Beatles (White Album)">
+                <h3>The Beatles ("White Album") (1968)</h3>
+                <p>Двойной альбом с разнообразными стилями и легендарными треками, такими как While My Guitar Gently Weeps и Blackbird.</p>
+                <button onclick="playAlbum('music/ThebeatlesCyBabyCry.mp3', 'The Beatles ("White Album")')">Послушать альбом</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Мини-плеер -->
+    <div class="mini-player" id="miniPlayer">
+        <p id="playingTitle">Сейчас играет: Ничего</p>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <script src="script.js"></script>
+</section>
+
+<script>
+    // Воспроизведение трека
+    function playAlbum(file, title) {
+    const audioPlayer = document.getElementById("audioPlayer");
+    const playingTitle = document.getElementById("playingTitle");
+
+    // Устанавливаем путь к файлу
+    audioPlayer.src = file;
+
+    // Обновляем заголовок мини-плеера
+    playingTitle.textContent = `Сейчас играет: ${title}`;
+
+    // Запускаем воспроизведение
+    audioPlayer.play();
+}
+
+    // Анимация появления альбомов при листании
+    document.addEventListener("DOMContentLoaded", () => {
+        const albums = document.querySelectorAll('.album');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        albums.forEach(album => observer.observe(album));
+    });
+</script>
+
+    <!-- Контакты -->
+    <section class="contact">
+    <h2 class="section-title">Свяжитесь с нами</h2>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+    <p id="responseMessage" style="margin-top: 10px; color: green;"></p>
+</section>
+
+<section class="contact">
+
+<script>
+    const form = document.getElementById("contactForm");
+    const responseMessage = document.getElementById("responseMessage");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Собираем данные из формы
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        // Отправляем данные на Google Apps Script
+        fetch("https://docs.google.com/spreadsheets/d/1yNx29D1_MYWjgbpmr81ZzVpv5ATsgaJYbhRwXqAzA3s/edit?gid=0#gid=0", { // Замените на URL вашего веб-приложения
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            responseMessage.textContent = data.message; // Сообщение об успехе
+            form.reset(); // Очистка формы
+        })
+        .catch(error => {
+            console.error("Ошибка:", error);
+            responseMessage.style.color = "red";
+            responseMessage.textContent = "Произошла ошибка при отправке данных.";
+        });
+    });
+
+    function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1"); // Название листа
+  const data = JSON.parse(e.postData.contents);
+  
+  // Добавляем данные из формы в таблицу
+  sheet.appendRow([data.name, data.email, data.message, new Date()]);
+
+  // Возвращаем ответ
+  return ContentService.createTextOutput(JSON.stringify({
+    status: "success",
+    message: "Данные успешно отправлены!"
+  })).setMimeType(ContentService.MimeType.JSON);
+}
+</script>
+
+
+    <!-- Контактная информация -->
+    <div class="contact-info">
+        <p><strong>Телефон:</strong> +1 (123) 456-7890</p>
+        <p><strong>Адрес:</strong> 221B Baker Street, London, UK</p>
+        <p><strong>Email:</strong> info@thebeatles.com</p>
+    </div>
+
+    <!-- Социальные сети -->
+    <div class="social-media">
+        <a href="https://vk.com" target="_blank" class="social-icon">
+            <img src="path_to_twitter_image.png" alt="VK">
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+            <img src="path_to_twitter_image.png" alt="Twitter">
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon">
+            <img src="path_to_youtube_image.png" alt="YouTube">
+        </a>
+    </div>
+</section>
+
+ <!-- Подключение стилей Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            width: 100%;
+            height: 500px; /* Высота карты */
+        }
+        .error {
+            text-align: center;
+            color: red;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Контейнер для карты -->
+    <div id="map"></div>
+    <div class="error" id="error-message"></div>
+
+    <!-- Подключение Leaflet.js -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Инициализация карты
+        const map = L.map('map').setView([55.7558, 37.6173], 12); // По умолчанию Москва
+
+        // Подключение тайлов OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Добавление маркера по умолчанию
+        L.marker([55.7558, 37.6173]).addTo(map)
+            .bindPopup('Мы находимся здесь (по умолчанию Москва).')
+            .openPopup();
+
+        // Геолокация
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLng = position.coords.longitude;
+
+                    // Центрирование карты на местоположении пользователя
+                    map.setView([userLat, userLng], 14);
+
+                    // Добавление маркера местоположения
+                    L.marker([userLat, userLng]).addTo(map)
+                        .bindPopup('Вы находитесь здесь.')
+                        .openPopup();
+                },
+                (error) => {
+                    // Обработка ошибок
+                    const errorMessage = document.getElementById('error-message');
+                    switch (error.code) {
+                        case error.PERMISSION_DENIED:
+                            errorMessage.textContent = "Вы запретили доступ к геолокации.";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            errorMessage.textContent = "Информация о вашем местоположении недоступна.";
+                            break;
+                        case error.TIMEOUT:
+                            errorMessage.textContent = "Время ожидания истекло.";
+                            break;
+                        default:
+                            errorMessage.textContent = "Произошла неизвестная ошибка.";
+                    }
+                }
+            );
+        } else {
+            document.getElementById('error-message').textContent = "Ваш браузер не поддерживает геолокацию.";
+        }
+    </script>
+
+</body>
+</html>
